@@ -30,7 +30,7 @@
             android:layout_height="119dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="111dp"
-            android:src="@drawable/ico_pesantukang" />
+            android:src="@drawable/logo_aplikasi" />
 
         <TextView
             android:id="@+id/textView"
