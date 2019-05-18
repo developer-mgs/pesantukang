@@ -4,6 +4,7 @@ package Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,7 +23,7 @@ import com.synnapps.carouselview.ImageListener;
 public class FragmentBeranda extends Fragment {
     CarouselView carouselView;
 
-    int[] sampleImages = {R.drawable.slidder1, R.drawable.slidder2, R.drawable.sedot_banjir};
+    int[] sampleImages = {R.drawable.slidder1, R.drawable.slidder2, R.drawable.slider3};
 
     public FragmentBeranda() {
         // Required empty public constructor
@@ -34,6 +35,10 @@ public class FragmentBeranda extends Fragment {
                              Bundle savedInstanceState) {
 
         final View view = inflater.inflate(R.layout.fragment_beranda, container, false);
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayShowHomeEnabled(true);
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setLogo(R.drawable.logo_barok);
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayUseLogoEnabled(true);
+
         carouselView = (CarouselView) view.findViewById(R.id.carouselView);
         carouselView.setPageCount(sampleImages.length);
 
