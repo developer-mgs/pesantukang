@@ -6,79 +6,76 @@
     android:layout_height="match_parent"
     >
 
-    <TextView
-        android:id="@+id/awlTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:textStyle="bold"
-        android:textColor="@color/colorPrimary"
-        android:text="PESAN TUKANG" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-140dp"
+        android:paddingBottom="60dp">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="264dp"
-        android:layout_marginTop="150dp"
-        android:src="@drawable/tukang3"
-        />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="264dp"
+            android:layout_marginTop="190dp"
+            android:src="@drawable/tukang3"
+            />
 
-    <TextView
-        android:id="@+id/wlcTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="490dp"
-        android:layout_marginLeft="10dp"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:text="Selamat datang di PESAN TUKANG!" />
+        <TextView
+            android:id="@+id/wlcTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="490dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:text="Selamat datang di PESAN TUKANG !" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="520dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:text="Mau pasang baru atau memperbaiki peralatan elektronik, rumah, dan lainnya yang membutuhkan tukang? PESAN TUKANG aja!" />
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="520dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Mau pasang baru atau memperbaiki peralatan elektronik, rumah, dan lainnya yang membutuhkan tukang? PESAN TUKANG aja!" />
 
-    <Button
-        android:id="@+id/btnLog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="580dp"
-        android:width="160dp"
-        android:background="@color/colorPrimary"
-        android:layout_marginLeft="10dp"
-        android:textColor="#fff"
-        android:textStyle="bold"
-        android:text="Log In" />
+        <Button
+            android:id="@+id/btnLog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="580dp"
+            android:width="160dp"
+            android:background="@color/colorPrimary"
+            android:layout_marginLeft="10dp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:text="Log In" />
 
-    <Button
-        android:id="@+id/btnSign"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="235dp"
-        android:layout_marginTop="580dp"
-        android:layout_marginRight="10dp"
-        android:width="160dp"
-        android:background="@color/colorPrimary"
-        android:text="Sign Up"
-        android:textColor="#fff"
-        android:textStyle="bold" />
+        <Button
+            android:id="@+id/btnSign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="235dp"
+            android:layout_marginTop="580dp"
+            android:layout_marginRight="10dp"
+            android:width="160dp"
+            android:background="@color/colorPrimary"
+            android:text="Sign Up"
+            android:textColor="#fff"
+            android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btnLog2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="650dp"
-        android:width="385dp"
-        android:background="#4267b2"
-        android:layout_marginLeft="10dp"
-        android:textColor="#fff"
-        android:textStyle="bold"
-        android:text="Masuk dengan Facebook" />
+        <Button
+            android:id="@+id/btnLog2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="650dp"
+            android:background="#4267b2"
+            android:layout_centerHorizontal="true"
+            android:text="Masuk dengan Facebook"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
 
 
 </RelativeLayout>

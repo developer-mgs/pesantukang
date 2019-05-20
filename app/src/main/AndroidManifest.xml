@@ -9,14 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<<<<<<< HEAD
+
         <activity android:name=".activity_awal"></activity>
         <activity android:name=".activity_login" />
         <activity android:name=".activity_register" />
-=======
+
         <activity android:name=".activity.PemesananActivity"></activity>
         <activity android:name=".activity.DetailActivity" />
->>>>>>> 1cf23ac63a8f79d5d77bf6c673365a209c09c8de
+
         <activity android:name=".BerandaActivity" />
         <activity android:name="Fragment.FragmentLainnya" />
         <activity android:name="Fragment.FragmentProfil" />

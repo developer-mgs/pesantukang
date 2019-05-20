@@ -163,7 +163,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
-                android:text="Detail Lokasi"
+                android:text="Catatan Tambahan (Opsional)"
                 android:textStyle="bold"
                 android:textColor="@color/black2"/>
 
