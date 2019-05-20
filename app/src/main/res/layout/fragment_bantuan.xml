@@ -34,7 +34,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bantuan"
+                android:text="Lainnya"
                 android:layout_marginTop="20dp"
                 android:textStyle="normal"
                 android:layout_gravity="center_horizontal"
@@ -48,7 +48,7 @@
                 android:layout_marginTop="15dp"
                 app:isAnimated="true"
                 android:layout_marginHorizontal="10dp"
-                app:heading="Cara mengirim laporan"
+                app:heading="Panduan Pemesanan"
                 app:isExpanded="false"
                 app:isPartitioned="true">
 
@@ -69,7 +69,7 @@
                 android:layout_marginTop="15dp"
                 app:isAnimated="true"
                 android:layout_marginHorizontal="10dp"
-                app:heading="Cara melihat perkembangan laporan"
+                app:heading="Frequently Asked Question"
                 app:isExpanded="false"
                 app:isPartitioned="true">
 
@@ -90,7 +90,7 @@
                 android:layout_marginTop="15dp"
                 app:isAnimated="true"
                 android:layout_marginHorizontal="10dp"
-                app:heading="Cara mengganti pengaturan profil"
+                app:heading="Term of Service"
                 app:isExpanded="false"
                 app:isPartitioned="true">
 
@@ -100,6 +100,48 @@
                     android:layout_height="wrap_content"
                     android:textSize="16sp"
                     android:id="@+id/txtGantiProfil"
+                    android:text="Ganti Profil"
+                    />
+
+            </com.riyagayasen.easyaccordion.AccordionView>
+
+            <com.riyagayasen.easyaccordion.AccordionView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:isAnimated="true"
+                android:layout_marginHorizontal="10dp"
+                app:heading="Hubungi Kami"
+                app:isExpanded="false"
+                app:isPartitioned="true">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:id="@+id/txtGantiProfil2"
+                    android:text="Ganti Profil"
+                    />
+
+            </com.riyagayasen.easyaccordion.AccordionView>
+
+            <com.riyagayasen.easyaccordion.AccordionView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:isAnimated="true"
+                android:layout_marginHorizontal="10dp"
+                app:heading="Beri Penilaian di Playstore"
+                app:isExpanded="false"
+                app:isPartitioned="true">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:id="@+id/txtGantiProfil3"
                     android:text="Ganti Profil"
                     />
 
