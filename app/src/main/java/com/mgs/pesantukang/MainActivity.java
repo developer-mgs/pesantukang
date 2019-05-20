@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void run() {
-                startActivity(new Intent(MainActivity.this, BerandaActivity.class));
+                startActivity(new Intent(MainActivity.this, activity_awal.class));
                 finish();
             }
         }, SPLASH_TIME_OUT);

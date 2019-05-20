@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.mgs.pesantukang.R;
+import com.mgs.pesantukang.activity.DetailActivity;
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageListener;
 
@@ -22,6 +23,7 @@ import com.synnapps.carouselview.ImageListener;
  */
 public class FragmentBeranda extends Fragment {
     CarouselView carouselView;
+    ImageView ico_mn1;
 
     int[] sampleImages = {R.drawable.slidder1, R.drawable.slidder2, R.drawable.slider3};
 
@@ -40,9 +42,19 @@ public class FragmentBeranda extends Fragment {
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayUseLogoEnabled(true);
 
         carouselView = (CarouselView) view.findViewById(R.id.carouselView);
+        ico_mn1 = view.findViewById(R.id.ico_mn1);
         carouselView.setPageCount(sampleImages.length);
 
         carouselView.setImageListener(imageListener);
+        ico_mn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), DetailActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
         return view;
     }
 
