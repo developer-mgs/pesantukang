@@ -30,7 +30,7 @@
                     <ImageView
                         android:id="@+id/imgProfile"
                         android:layout_width="350dp"
-                        android:background="#000"
+                        android:src="@drawable/gb_1"
                         android:layout_marginTop="30dp"
                         android:layout_centerInParent="true"
                         android:layout_height="300dp" />
@@ -45,6 +45,15 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="10pt"
+                        android:textStyle="bold"
+                        android:padding="5dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000"
+                        android:text="Pilih sesuai kebutuhanmu"/>
+
                     <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
                         xmlns:card_view="http://schemas.android.com/apk/res-auto"
                         android:layout_width="match_parent"
@@ -52,7 +61,7 @@
                         android:foreground="?android:attr/selectableItemBackground"
                         android:orientation="vertical"
                         android:layout_margin="5dp"
-                        card_view:cardCornerRadius="4dp"
+                        card_view:cardCornerRadius="6dp"
                         card_view:cardElevation="@dimen/cardview_default_elevation">
 
                         <LinearLayout
@@ -60,22 +69,40 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_marginLeft="10dp"
-                                android:layout_height="50dp"
-                                android:src="@drawable/ic_mail"/>
+                            <LinearLayout
+                                android:padding="5dp"
+                                android:orientation="vertical"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+                                <TextView
+                                    android:padding="5dp"
+                                    android:textStyle="bold"
+                                    android:textSize="15dp"
+                                    android:text="Perbaikan / Instalasi"
+                                    android:id="@+id/text_name2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#000"
+                                    android:layout_alignParentTop="true"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:textColor="#000"
+                                    android:paddingLeft="5dp"
+                                    android:text="Rp 100.000"/>
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Mail"
-                                android:id="@+id/txtEmail"
-                                android:layout_gravity="center"
-                                android:layout_marginLeft="20dp"
-                                android:textSize="20sp"
-                                android:textColor="#000"
-                                />
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Pilih"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:id="@+id/btnSimpanLaporan2"
+                                    android:background="@color/colorPrimary"
+                                    android:textColor="@color/white"
+                                    android:layout_alignParentBottom="true" />
+
+                            </LinearLayout>
 
                         </LinearLayout>
 
@@ -85,11 +112,12 @@
                     <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
                         xmlns:card_view="http://schemas.android.com/apk/res-auto"
                         android:layout_margin="5dp"
+                        android:layout_marginTop="100dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:foreground="?android:attr/selectableItemBackground"
                         android:orientation="vertical"
-                        card_view:cardCornerRadius="4dp"
+                        card_view:cardCornerRadius="6dp"
                         card_view:cardElevation="@dimen/cardview_default_elevation">
 
                         <LinearLayout
@@ -97,16 +125,40 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Perbaikan / Instalasi"
-                                android:id="@+id/txtPhone"
-                                android:layout_gravity="center"
-                                android:layout_marginLeft="20dp"
-                                android:textSize="20sp"
-                                android:textColor="#000"
-                                />
+                            <LinearLayout
+                                android:padding="5dp"
+                                android:orientation="vertical"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+                                <TextView
+                                    android:padding="5dp"
+                                    android:textStyle="bold"
+                                    android:textSize="15dp"
+                                    android:textColor="#000"
+                                    android:text="Survey dan Konsultasi"
+                                    android:id="@+id/text_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:paddingLeft="5dp"
+                                    android:textColor="#000"
+                                    android:text="Rp 100.000"/>
+
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Pilih"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:id="@+id/btnSimpanLaporan"
+                                    android:background="@color/colorPrimary"
+                                    android:textColor="@color/white"
+                                    android:layout_alignParentBottom="true" />
+
+                            </LinearLayout>
 
 
 
@@ -114,6 +166,13 @@
 
 
                     </android.support.v7.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="#000"
+                        android:text="Butuh bantuan ? Silahkan hubungi Customer Service kami melalui menu LAINNYA -> Hubungi kami atau hubungi Call Center"/>
 
 
                 </LinearLayout>
