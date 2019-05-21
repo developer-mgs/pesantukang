@@ -3,27 +3,11 @@
 
     <item
         android:id="@+id/navigation_semua"
-        android:icon="@drawable/ic_all"
-        android:title="Semua" />
-
-    <item
-        android:id="@+id/navigation_menunggu"
         android:icon="@drawable/ic_wait"
-        android:title="Menunggu" />
-
-    <item
-        android:id="@+id/navigation_proses"
-        android:icon="@drawable/progress"
-        android:title="Di Proses" />
-
+        android:title="Aktif" />
     <item
         android:id="@+id/navigation_selesai"
         android:icon="@drawable/ic_check24"
         android:title="Selesai" />
-
-    <item
-        android:id="@+id/navigation_mylaporan"
-        android:icon="@drawable/myreport"
-        android:title="Laporanku" />
 
 </menu>
