@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_semua"
+        android:id="@+id/navigation_aktif"
         android:icon="@drawable/ic_wait"
         android:title="Aktif" />
     <item
