@@ -22,7 +22,6 @@
         android:layout_height="match_parent"
         >
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:id="@+id/lineDataPengguna"
@@ -34,7 +33,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lainnya"
+                android:text="Bantuan"
                 android:layout_marginTop="20dp"
                 android:textStyle="normal"
                 android:layout_gravity="center_horizontal"
