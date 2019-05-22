@@ -129,10 +129,6 @@ public class BerandaActivity extends AppCompatActivity {
                 String user_buat   = c.getString("user_buat");
 
                 SharedVariabel.ID_USER_PERMANEN = user_id;
-
-                Log.d("user_id", user_id);
-
-
             }
 
 

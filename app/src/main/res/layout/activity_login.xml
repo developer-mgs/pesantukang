@@ -50,7 +50,7 @@
                 android:inputType="textEmailAddress"
                 android:textColorHint="@color/black2"
                 android:textColor="@color/black2"
-                android:drawableEnd="@drawable/ic_email_black_24dp"
+                android:drawableEnd="@drawable/ic_email"
                 tools:ignore="RtlCompat" />
 
         </android.support.design.widget.TextInputLayout>

@@ -2,8 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mgs.pesantukang">
 
-
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,26 +11,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".activity_awal"></activity>
+        <activity android:name=".EditProfilActivity"></activity>
+        <activity android:name=".activity_awal" />
         <activity android:name=".activity_login" />
         <activity android:name=".activity_register" />
-
         <activity
             android:name=".activity.PemesananActivity"
-            android:parentActivityName=".activity.DetailActivity" >
+            android:parentActivityName=".activity.DetailActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activity.DetailActivity" />
         </activity>
         <activity
             android:name=".activity.DetailActivity"
-            android:parentActivityName=".BerandaActivity" >
+            android:parentActivityName=".BerandaActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".BerandaActivity" />
         </activity>
-
         <activity android:name=".BerandaActivity" />
         <activity android:name="Fragment.FragmentLainnya" />
         <activity android:name="Fragment.FragmentProfil" />

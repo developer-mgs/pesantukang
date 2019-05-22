@@ -24,6 +24,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.mgs.pesantukang.BerandaActivity;
+import com.mgs.pesantukang.EditProfilActivity;
 import com.mgs.pesantukang.R;
 import com.mgs.pesantukang.RequestHandler;
 import com.mgs.pesantukang.SessionSharePreference;
@@ -43,7 +44,8 @@ import Kelas.SharedVariabel;
 public class FragmentProfil extends Fragment {
 SessionSharePreference session;
 CardView cardLogout;
-TextView txtNamaProfil, txtEmail,txtPhone;
+TextView txtNamaProfil, txtEmail,txtPhone,txtAlamat;
+FloatingActionButton fabProfil;
 
     public FragmentProfil() {
         // Required empty public constructor
@@ -59,9 +61,11 @@ TextView txtNamaProfil, txtEmail,txtPhone;
         cardLogout = view.findViewById(R.id.cardLogout);
         session = new SessionSharePreference(getActivity());
 
-        txtNamaProfil= view.findViewById(R.id.txtNamaProfil);
-        txtEmail= view.findViewById(R.id.txtEmail);
-        txtPhone= view.findViewById(R.id.txtPhone);
+        txtNamaProfil = view.findViewById(R.id.txtNamaProfil);
+        txtEmail = view.findViewById(R.id.txtEmail);
+        txtPhone = view.findViewById(R.id.txtPhone);
+        txtAlamat = view.findViewById(R.id.txtAlamat);
+        fabProfil = view.findViewById(R.id.btnEditProfile);
 
         getJSON(SharedVariabel.ID_USER_PERMANEN);
 
@@ -70,6 +74,14 @@ TextView txtNamaProfil, txtEmail,txtPhone;
             public void onClick(View v) {
                 session.setNama(null);
                 Intent intent = new Intent(getActivity(), activity_awal.class);
+                startActivity(intent);
+            }
+        });
+
+        fabProfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), EditProfilActivity.class);
                 startActivity(intent);
             }
         });
@@ -127,12 +139,12 @@ TextView txtNamaProfil, txtEmail,txtPhone;
                 String user_password   = c.getString("user_password");
                 String user_sex   = c.getString("user_sex");
                 String user_buat   = c.getString("user_buat");
-
+                String user_alamat   = c.getString("user_alamat");
 
                 txtNamaProfil.setText(user_nm);
                 txtEmail.setText(user_email);
                 txtPhone.setText(user_notelp);
-
+                txtAlamat.setText(user_alamat);
 
             }
 
