@@ -82,6 +82,8 @@ NiftyDialogBuilder dialog;
                     etNik.setError("Nik harus diisi !");
                 }else if(etNama.getText().toString().isEmpty()){
                     etNama.setError("Nama harus di isi !");
+                }else if(spKelamin.getSelectedItem().toString().trim().equals("Jenis Kelamin")){
+                    etNama.setError("Jenis Kelamin harus di isi !");
                 }else if(etNope.getText().toString().isEmpty()){
                     etNope.setError("No. Hp harus di isi !");
                 }else if(etPassword.getText().toString().isEmpty()){
