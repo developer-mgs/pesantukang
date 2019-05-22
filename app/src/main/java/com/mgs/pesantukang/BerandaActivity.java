@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 
 import Fragment.FragmentBeranda;
@@ -19,6 +20,8 @@ public class BerandaActivity extends AppCompatActivity {
     FragmentPesanan fragmentPesanan;
     FragmentProfil fragmentProfil;
     FragmentBantuan fragmentBantuan;
+    SessionSharePreference session;
+
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -54,6 +57,11 @@ public class BerandaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_beranda);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        session = new SessionSharePreference(BerandaActivity.this.getApplicationContext());
+        String nama = session.getNama();
+
+        //Log.d("Nama ", nama);
 
         fragmentBeranda = new FragmentBeranda();
         goToFragment(fragmentBeranda,true);

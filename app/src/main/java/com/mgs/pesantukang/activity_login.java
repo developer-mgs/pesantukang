@@ -33,13 +33,24 @@ import java.util.List;
 public class activity_login extends AppCompatActivity {
     EditText etEmail, etPassword;
     Button btnLogin;
-
+    SessionSharePreference session;
+    public static String USER_NAME="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         final ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
+
+        session = new SessionSharePreference(activity_login.this.getApplicationContext());
+
+        String nama = session.getNama();
+        if(nama != null){
+            Intent intent = new Intent(activity_login.this, BerandaActivity.class);
+            startActivity(intent);
+        }else{
+            //Toast.makeText(getApplication(),"")
+        }
 
         etEmail=(EditText) findViewById(R.id.etEmail);
         etPassword=(EditText) findViewById(R.id.etPassword);
@@ -56,6 +67,7 @@ public class activity_login extends AppCompatActivity {
                     etPassword.setError("Password harus di isi !");
                 }else{
                     loginUser(etEmail.getText().toString().trim(), etPassword.getText().toString().trim());
+
                 }
             }
         });
@@ -120,7 +132,11 @@ public class activity_login extends AppCompatActivity {
                 String s = result.trim();
                 loadingDialog.dismiss();
                 if(s.equalsIgnoreCase("success")){
+                    String nama = String.valueOf(etEmail.getText());
+                    session.setNama(nama);
                     Intent intent = new Intent(activity_login.this, BerandaActivity.class);
+                    intent.putExtra(USER_NAME, etEmail.getText().toString().trim());
+                    finish();
                     startActivity(intent);
                 }else {
                     Toast.makeText(getApplication(),"Username atau Password Salah!",Toast.LENGTH_LONG).show();
