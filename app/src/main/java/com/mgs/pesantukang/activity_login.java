@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.apache.http.HttpEntity;
@@ -32,6 +33,7 @@ import java.util.List;
 
 public class activity_login extends AppCompatActivity {
     EditText etEmail, etPassword;
+    TextView txtKeterangan;
     Button btnLogin;
 
     @Override
@@ -43,6 +45,7 @@ public class activity_login extends AppCompatActivity {
 
         etEmail=(EditText) findViewById(R.id.etEmail);
         etPassword=(EditText) findViewById(R.id.etPassword);
+        txtKeterangan = (TextView) findViewById(R.id.txtKeterangan);
         btnLogin = (Button) findViewById(R.id.btnLogin);
 
 
@@ -57,6 +60,14 @@ public class activity_login extends AppCompatActivity {
                 }else{
                     loginUser(etEmail.getText().toString().trim(), etPassword.getText().toString().trim());
                 }
+            }
+        });
+
+        txtKeterangan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(activity_login.this,activity_register.class);
+                startActivity(intent);
             }
         });
     }

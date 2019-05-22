@@ -18,8 +18,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="40sp"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginTop="-10dp"
+            android:padding="5dp"
             android:textColor="@color/colorPrimary"
             android:text="Log In" />
 
@@ -90,12 +90,13 @@
             android:textSize="17sp"
             android:textStyle="bold" />
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/txtKeterangan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="10dp"
             android:width="390dp"
+            android:textColor="@color/colorPrimary"
             android:textAlignment="center"
             android:text="Belum Punya Akun? Daftar Sekarang" />
     </LinearLayout>
