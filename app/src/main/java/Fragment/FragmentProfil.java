@@ -24,6 +24,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.mgs.pesantukang.BerandaActivity;
+import com.mgs.pesantukang.EditPasswordActivity;
 import com.mgs.pesantukang.EditProfilActivity;
 import com.mgs.pesantukang.R;
 import com.mgs.pesantukang.RequestHandler;
@@ -43,7 +44,7 @@ import Kelas.SharedVariabel;
  */
 public class FragmentProfil extends Fragment {
 SessionSharePreference session;
-CardView cardLogout;
+CardView cardLogout,cardGantiPswd;
 TextView txtNamaProfil, txtEmail,txtPhone,txtAlamat;
 FloatingActionButton fabProfil;
 
@@ -59,6 +60,7 @@ FloatingActionButton fabProfil;
 
         final View view = inflater.inflate(R.layout.fragment_profil, container, false);
         cardLogout = view.findViewById(R.id.cardLogout);
+        cardGantiPswd = view.findViewById(R.id.cardGantiPswd);
         session = new SessionSharePreference(getActivity());
 
         txtNamaProfil = view.findViewById(R.id.txtNamaProfil);
@@ -74,6 +76,14 @@ FloatingActionButton fabProfil;
             public void onClick(View v) {
                 session.setNama(null);
                 Intent intent = new Intent(getActivity(), activity_awal.class);
+                startActivity(intent);
+            }
+        });
+
+        cardGantiPswd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),EditPasswordActivity.class);
                 startActivity(intent);
             }
         });

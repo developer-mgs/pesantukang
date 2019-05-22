@@ -1,10 +1,12 @@
 package com.mgs.pesantukang;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -42,17 +44,32 @@ NiftyDialogBuilder dialog;
         etAlamat=(EditText) findViewById(R.id.etAlamat);
         btnUbah=(Button) findViewById(R.id.btnUbah);
 
+        btnUbah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(etAlamat.getText().toString().isEmpty()){
+                    etAlamat.setError("Alamat harus diisi !");
+                }else if(etNope.getText().toString().isEmpty()){
+                    etNope.setError("No. Telepon harus diisi !");
+                }else{
+                    ubahData(SharedVariabel.ID_USER_PERMANEN, etAlamat.getText().toString().trim(), etNope.getText().toString().trim());
+                }
+
+            }
+        });
+
 //        Log.d("Nomor ", SharedVariabel.ID_USER_PERMANEN);
     }
 
 
-    public void ubahData(final String alamat, final String notelp){
+    public void ubahData(final String id_user, final String alamat, final String notelp){
 
         class SendPostReqAsyncTask extends AsyncTask<String, Void, String> {
             @Override
             protected String doInBackground(String... params) {
 
                 List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
+                nameValuePairs.add(new BasicNameValuePair("user_id", id_user));
                 nameValuePairs.add(new BasicNameValuePair("user_alamat", alamat));
                 nameValuePairs.add(new BasicNameValuePair("user_notelp", notelp));
 
@@ -82,6 +99,8 @@ NiftyDialogBuilder dialog;
                 if(result.equalsIgnoreCase("success")){
 
                     Toast.makeText(getApplication(),"profil berhasil diubah",Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(EditProfilActivity.this, BerandaActivity.class);
+                    startActivity(intent);
 
                 }else{
                     Toast.makeText(getApplication(),"Gagal Simpan Data",Toast.LENGTH_LONG).show();
@@ -89,7 +108,7 @@ NiftyDialogBuilder dialog;
             }
         }
         SendPostReqAsyncTask sendPostReqAsyncTask = new SendPostReqAsyncTask();
-        sendPostReqAsyncTask.execute(alamat, notelp);
+        sendPostReqAsyncTask.execute(id_user, alamat, notelp);
 
     }
 }

@@ -31,7 +31,7 @@
                     android:layout_width="match_parent"
                     android:id="@+id/rela1"
                     android:background="@color/colorPrimary"
-                    android:layout_height="250dp">
+                    android:layout_height="180dp">
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/imgProfile"
@@ -191,8 +191,6 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
-
-
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -258,10 +256,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_marginRight="30dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginTop="430dp"
         android:src="@drawable/pencil"
         app:borderWidth="0dp"
         app:elevation="6dp"
