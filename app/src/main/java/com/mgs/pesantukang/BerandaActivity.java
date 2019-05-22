@@ -100,11 +100,11 @@ public class BerandaActivity extends AppCompatActivity {
 
             @Override
             protected String doInBackground(Void... params) {
-                HashMap<String,String> nama_lok = new HashMap<>();
-                nama_lok.put("mail", id);
+                HashMap<String,String> email = new HashMap<>();
+                email.put("user_email", id);
 
                 RequestHandler rh = new RequestHandler();
-                String s = rh.sendPostRequest("http://pstiubl.com/api_diskom1/dt_user.php?mail=", nama_lok);
+                String s = rh.sendPostRequest("http://gascoding.id/api_pesantukang/api_detailuser.php?user_mail=", email);
                 return s;
             }
         }
@@ -119,12 +119,18 @@ public class BerandaActivity extends AppCompatActivity {
 
             for (int i = 0; i < result.length(); i++) {
                 JSONObject c = result.getJSONObject(i);
-                String id_user = c.getString("id_user");
-                String nama = c.getString("nm_lengkap");
-                String no_hp = c.getString("no_hp");
-                String pass = c.getString("password");
+                String user_id = c.getString("user_id");
+                String user_nik = c.getString("user_nik");
+                String user_nm = c.getString("user_nm");
+                String user_email   = c.getString("user_email");
+                String user_notelp   = c.getString("user_notelp");
+                String user_password   = c.getString("user_password");
+                String user_sex   = c.getString("user_sex");
+                String user_buat   = c.getString("user_buat");
 
-                SharedVariabel.ID_USER_PERMANEN = id_user;
+                SharedVariabel.ID_USER_PERMANEN = user_id;
+
+                Log.d("user_id", user_id);
 
 
             }
