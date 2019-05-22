@@ -23,12 +23,15 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.mgs.pesantukang.R;
+import com.mgs.pesantukang.SessionSharePreference;
+import com.mgs.pesantukang.activity_awal;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class FragmentProfil extends Fragment {
-
+SessionSharePreference session;
+CardView cardLogout;
 
     public FragmentProfil() {
         // Required empty public constructor
@@ -40,6 +43,17 @@ public class FragmentProfil extends Fragment {
                              Bundle savedInstanceState) {
 
         final View view = inflater.inflate(R.layout.fragment_profil, container, false);
+        cardLogout = view.findViewById(R.id.cardLogout);
+        session = new SessionSharePreference(getActivity());
+
+        cardLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                session.setNama(null);
+                Intent intent = new Intent(getActivity(), activity_awal.class);
+                startActivity(intent);
+            }
+        });
 
         return view;
     }
