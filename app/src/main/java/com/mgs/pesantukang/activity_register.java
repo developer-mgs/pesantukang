@@ -4,6 +4,8 @@ import android.os.AsyncTask;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,7 +29,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class activity_register extends AppCompatActivity {
-EditText etNik, etNama, etEmail, etNope, etPassword;
+EditText etNik, etNama, etEmail, etNope, etPassword, etPassword2;
 Spinner spKelamin;
 Button btnDaftar;
 NiftyDialogBuilder dialog;
@@ -45,15 +47,52 @@ NiftyDialogBuilder dialog;
         etEmail =(EditText) findViewById(R.id.etEmail);
         etNope = (EditText) findViewById(R.id.etNope);
         etPassword = (EditText) findViewById(R.id.etPassword);
+        etPassword2 = (EditText) findViewById(R.id.etPassword2);
         spKelamin=(Spinner) findViewById(R.id.spKelamin);
         btnDaftar=(Button) findViewById(R.id.btnDaftar);
+
+        etPassword2.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(etPassword2.getText().toString().equals(etPassword.getText().toString())){
+
+                }else if(etPassword2.getText().toString().isEmpty()){
+
+                }else{
+                    etPassword2.setError("Password tidak sama !");
+                }
+
+            }
+        });
 
         btnDaftar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                simpanData(etNik.getText().toString().trim(), etNama.getText().toString().trim(),
-                        etEmail.getText().toString().trim(), etNope.getText().toString().trim(),
-                        etPassword.getText().toString().trim(), spKelamin.getSelectedItem().toString().trim());
+                if(etNik.getText().toString().isEmpty()){
+                    etNik.setError("Nik harus diisi !");
+                }else if(etNama.getText().toString().isEmpty()){
+                    etNama.setError("Nama harus di isi !");
+                }else if(etNope.getText().toString().isEmpty()){
+                    etNope.setError("No. Hp harus di isi !");
+                }else if(etPassword.getText().toString().isEmpty()){
+                    etPassword.setError("Password harus di isi");
+                }else if(etPassword2.getText().toString().isEmpty()){
+                    etPassword2.setError("Re type Password harus di isi !");
+                }else{
+                    simpanData(etNik.getText().toString().trim(), etNama.getText().toString().trim(),
+                            etEmail.getText().toString().trim(), etNope.getText().toString().trim(),
+                            etPassword.getText().toString().trim(), spKelamin.getSelectedItem().toString().trim());
+                }
             }
         });
 
