@@ -74,7 +74,7 @@ NiftyDialogBuilder dialog;
                 nameValuePairs.add(new BasicNameValuePair("user_notelp", notelp));
                 nameValuePairs.add(new BasicNameValuePair("user_password", password));
                 nameValuePairs.add(new BasicNameValuePair("user_sex", sex));
-                
+
                 try {
                     HttpClient httpClient = new DefaultHttpClient();
                     HttpPost httpPost = new HttpPost(
