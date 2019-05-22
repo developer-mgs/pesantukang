@@ -21,10 +21,21 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import com.mgs.pesantukang.BerandaActivity;
 import com.mgs.pesantukang.R;
+import com.mgs.pesantukang.RequestHandler;
 import com.mgs.pesantukang.SessionSharePreference;
 import com.mgs.pesantukang.activity_awal;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+
+import Kelas.SharedVariabel;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -32,10 +43,12 @@ import com.mgs.pesantukang.activity_awal;
 public class FragmentProfil extends Fragment {
 SessionSharePreference session;
 CardView cardLogout;
+TextView txtNamaProfil, txtEmail,txtPhone;
 
     public FragmentProfil() {
         // Required empty public constructor
     }
+
 
 
     @Override
@@ -45,6 +58,12 @@ CardView cardLogout;
         final View view = inflater.inflate(R.layout.fragment_profil, container, false);
         cardLogout = view.findViewById(R.id.cardLogout);
         session = new SessionSharePreference(getActivity());
+
+        txtNamaProfil= view.findViewById(R.id.txtNamaProfil);
+        txtEmail= view.findViewById(R.id.txtEmail);
+        txtPhone= view.findViewById(R.id.txtPhone);
+
+        getJSON(SharedVariabel.ID_USER_PERMANEN);
 
         cardLogout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +75,72 @@ CardView cardLogout;
         });
 
         return view;
+    }
+
+
+
+    private void getJSON(final String id){
+        class GetJSON extends AsyncTask<Void,Void,String> {
+
+            ProgressDialog loading;
+            @Override
+            protected void onPreExecute() {
+                super.onPreExecute();
+                loading = ProgressDialog.show(getActivity(),"Menampilkan Data","Tunggu Sebentar...",false,false);
+            }
+
+            @Override
+            protected void onPostExecute(String s) {
+                super.onPostExecute(s);
+                loading.dismiss();
+                //Toast.makeText(getApplication(),"Data "+id,Toast.LENGTH_LONG).show();
+                //showDetail(s);
+                showJSON2(s);
+            }
+
+            @Override
+            protected String doInBackground(Void... params) {
+                HashMap<String,String> user_id = new HashMap<>();
+                user_id.put("user_id", id);
+
+                RequestHandler rh = new RequestHandler();
+                String s = rh.sendPostRequest("http://gascoding.id/api_pesantukang/api_profil.php?user_id=", user_id);
+                return s;
+            }
+        }
+        GetJSON gj = new GetJSON();
+        gj.execute();
+    }
+
+    private void showJSON2(String json) {
+        try {
+            JSONObject jsonObject = new JSONObject(json);
+            JSONArray result = jsonObject.getJSONArray("result");
+
+            for (int i = 0; i < result.length(); i++) {
+                JSONObject c = result.getJSONObject(i);
+                String user_id = c.getString("user_id");
+                String user_nik = c.getString("user_nik");
+                String user_nm = c.getString("user_nm");
+                String user_email   = c.getString("user_email");
+                String user_notelp   = c.getString("user_notelp");
+                String user_password   = c.getString("user_password");
+                String user_sex   = c.getString("user_sex");
+                String user_buat   = c.getString("user_buat");
+
+
+                txtNamaProfil.setText(user_nm);
+                txtEmail.setText(user_email);
+                txtPhone.setText(user_notelp);
+
+
+            }
+
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
     }
 
 
