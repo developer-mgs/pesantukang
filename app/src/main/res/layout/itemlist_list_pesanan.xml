@@ -10,7 +10,7 @@
     android:layout_marginTop="5dp"
     android:foreground="?android:attr/selectableItemBackground"
     android:orientation="vertical"
-    card_view:cardCornerRadius="4dp"
+    card_view:cardCornerRadius="10dp"
     card_view:cardElevation="@dimen/cardview_default_elevation">
 
     <RelativeLayout
@@ -78,16 +78,6 @@
                         android:textColor="@color/primary_text_default_material_light"
                         android:textSize="@dimen/abc_text_size_subhead_material" />
 
-                    <TextView
-                        android:id="@+id/txtWaktuPesan"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="20-05-2019"
-                        android:layout_marginTop="6dp"
-                        android:paddingBottom="2dp"
-                        android:textColor="@color/primary_text_default_material_light"
-                        android:textSize="@dimen/abc_text_size_subhead_material" />
-
                 </LinearLayout>
 
                 <TextView
@@ -105,11 +95,13 @@
                 android:layout_width="match_parent"
                 android:visibility="visible"
                 android:layout_height="1dp"
+                android:layout_marginTop="15dp"
                 android:background="#000"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
+                android:layout_marginTop="5dp"
                 android:textColor="#000"
                 android:paddingLeft="5dp"
                 android:textStyle="bold"
@@ -122,6 +114,41 @@
                 android:paddingLeft="5dp"
                 android:text="Isi Alamat"
                 android:textColor="#000" />
+
+            <ImageView
+                android:id="@+id/imgCal"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_calendar"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:id="@+id/line2"
+                android:layout_marginTop="-25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/imgCal"
+                >
+
+
+                <TextView
+                    android:id="@+id/txtWaktuPesan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="22-05-2019"
+                    android:textColor="@color/primary_text_default_material_light"
+                    android:textSize="@dimen/abc_text_size_subhead_material" />
+
+            </LinearLayout>
 
             <ImageView
                 android:layout_width="wrap_content"

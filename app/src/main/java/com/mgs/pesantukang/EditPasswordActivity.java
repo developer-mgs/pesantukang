@@ -77,7 +77,7 @@ public class EditPasswordActivity extends AppCompatActivity {
                 }else if(etPasswordBaru.getText().toString().isEmpty()){
                     etPassword.setError("Password Baru Kosong !");
                 }else if(etPasswordUlang.getText().toString().isEmpty()){
-                    etPassword.setError("Konfirmasi Password Kosong !");
+                    etPassword.setError("` Password Kosong !");
                 }else{
                     ubahPassword(SharedVariabel.ID_USER_PERMANEN, etPasswordBaru.getText().toString().trim());
                 }

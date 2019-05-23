@@ -21,4 +21,5 @@
     <color name="album_title">#4c4c4c</color>
     <color name="photo_placeholder">#ccc</color>
     <color name="kuning">#fbc02d</color>
+    <color name="lightgray">#808080</color>
 </resources>
