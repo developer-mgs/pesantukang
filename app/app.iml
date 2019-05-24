@@ -168,6 +168,7 @@
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-tasks:11.4.2@aar" level="project" />
     <orderEntry type="library" name="Gradle: eu.the4thfloor.volley:com.android.volley:2015.05.28@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:collections:28.0.0@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.chrisbanes:PhotoView:2.1.3@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-maps:11.4.2@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-core-ui:28.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:asynclayoutinflater:28.0.0@aar" level="project" />

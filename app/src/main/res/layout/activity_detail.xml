@@ -28,7 +28,7 @@
                     android:layout_height="250dp">
 
                     <ImageView
-                        android:id="@+id/imgProfile"
+                        android:id="@+id/imgDetail"
                         android:layout_width="350dp"
                         android:src="@drawable/gb_1"
                         android:layout_marginTop="30dp"
