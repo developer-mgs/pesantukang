@@ -1,4 +1,5 @@
 package com.mgs.pesantukang;
+// Create Ari & Selamat
 
 import android.content.Intent;
 import android.os.Handler;

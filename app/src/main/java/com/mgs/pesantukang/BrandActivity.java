@@ -1,5 +1,7 @@
 package com.mgs.pesantukang;
 
+// Create Ari & Selamat
+
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.provider.MediaStore;

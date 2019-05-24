@@ -1,4 +1,5 @@
 package com.mgs.pesantukang;
+// Create Ari & Selamat
 
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -99,7 +100,7 @@ public class EditPasswordActivity extends AppCompatActivity {
                 try {
                     HttpClient httpClient = new DefaultHttpClient();
                     HttpPost httpPost = new HttpPost(
-                            "http://gascoding.id/api_pesantukang/api_ubahpassword.php");
+                            "link_api.php");
                     httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 
                     HttpResponse response = httpClient.execute(httpPost);

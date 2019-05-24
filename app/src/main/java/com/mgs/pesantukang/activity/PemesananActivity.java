@@ -1,4 +1,5 @@
 package com.mgs.pesantukang.activity;
+// Create by : Ari & Selamat
 
 import android.Manifest;
 import android.app.Activity;

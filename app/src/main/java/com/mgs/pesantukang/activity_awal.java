@@ -1,4 +1,6 @@
 package com.mgs.pesantukang;
+// Create by : Ari & Selamat
+
 
 import android.content.Intent;
 import android.content.SharedPreferences;

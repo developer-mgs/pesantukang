@@ -1,4 +1,5 @@
 package com.mgs.pesantukang.activity;
+// Create by : Ari & Selamat
 
 import android.app.Dialog;
 import android.content.Intent;

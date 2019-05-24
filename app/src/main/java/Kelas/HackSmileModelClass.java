@@ -1,4 +1,5 @@
 package Kelas;
+// Create Ari & Selamat
 
 public class HackSmileModelClass {
     private int image;

@@ -1,5 +1,7 @@
 package Adapter;
 
+// Create by : Ari & Selamat
+
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.CardView;

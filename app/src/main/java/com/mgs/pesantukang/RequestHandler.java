@@ -1,5 +1,7 @@
 package com.mgs.pesantukang;
 
+// Create Ari & Selamat
+
 
 
 import java.io.BufferedReader;

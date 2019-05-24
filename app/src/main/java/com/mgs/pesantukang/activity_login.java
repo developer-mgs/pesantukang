@@ -1,5 +1,7 @@
 package com.mgs.pesantukang;
 
+// Create by : Ari & Selamat
+
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -110,7 +112,7 @@ public class activity_login extends AppCompatActivity {
                 try{
                     HttpClient httpClient = new DefaultHttpClient();
                     HttpPost httpPost = new HttpPost(
-                            "http://gascoding.id/api_pesantukang/api_login.php");
+                            "link_api.php");
                     httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 
                     HttpResponse response = httpClient.execute(httpPost);

@@ -1,5 +1,7 @@
 package com.mgs.pesantukang;
 
+// Create Ari & Selamat
+
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
@@ -104,7 +106,7 @@ public class BerandaActivity extends AppCompatActivity {
                 email.put("user_email", id);
 
                 RequestHandler rh = new RequestHandler();
-                String s = rh.sendPostRequest("http://gascoding.id/api_pesantukang/api_detailuser.php?user_mail=", email);
+                String s = rh.sendPostRequest("link_api.php", email);
                 return s;
             }
         }

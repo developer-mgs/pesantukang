@@ -1,5 +1,7 @@
 package com.mgs.pesantukang;
 
+// Create Ari & Selamat
+
 import android.content.Context;
 import android.content.SharedPreferences;
 
